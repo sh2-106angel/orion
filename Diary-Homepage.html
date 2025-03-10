@@ -49,7 +49,15 @@ a:visited {
 <br>
 <br>
 <center><a href="Pointless-Endeavours.html">Pointless Endeavours</a></center>
-
+<script>
+  const tabs = document.querySelector('.tabs');
+  const tabButtons = tabs.querySelectorAll('[role="tab"]');
+  const tabPanels = tabs.querySelectorAll('[role="tabpanel"]');
+  function handleTabClick(event) {
+  console.log(event);
+}
+  tabButtons.forEach(button => button.addEventListener('click', handleTabClick));
+</script>
 <div class="window-body" >
 
   <menu role="tablist">
