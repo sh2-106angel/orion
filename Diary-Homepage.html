@@ -66,20 +66,20 @@ a:visited {
 <div class="window-body" >
 
   <menu role="tablist">
-    <li role="tab" aria-selected="true" aria-controls="panel-1" tabindex="-1"id="Angel"><button class="tabs" id="Angel" aria-selected="true" ><a href="#Angel">Angel</a></li>
-    <li role="tab" aria-selected="false" aria-controls="panel-2" tabindex="-1" id="SweetTime"><button class="tabs" id="Angel" aria-selected="false"><a href="#SweetTime">Sweet Time</a></li>
+    <li role="tab" aria-selected="true"><button class="tabs" id="Angel" aria-selected="true" ><a href="#Angel">Angel</a></li>
+    <li role="tab" aria-selected="false"><button class="tabs" id="SweetTime" aria-selected="false"><a href="#SweetTime">Sweet Time</a></li>
 
   </menu>
-  <div class="window" role="tabpanel" id="panel-1"  tabindex="0" aria-labelledby="tab-1">
+  <div class="window" role="tabpanel" id="panel-1"  tabindex="0" aria-labelledby="Angel">
     <div class="window-body">
-      <div class="tab-pane fade show active" id="panel-1" role="tabpanel" aria-labelledby="tab-1">
+      <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="Angel">
       <p>Hello! This is a work in progress...</p></div>
     </div>
   </div>
-  <div class="window" role="tabpanel" id="panel-2" tabindex="0" aria-labelledby="tab-2" hidden>
+  <div class="window" role="tabpanel" aria-labelledby="SweetTime" hidden>
     <div class="window-body">
-      <div class="tab-pane fade" id="panel-2" role="tabpanel" aria-labelledby="tab-2">
-      <p>content2</p>
+      <div class="tab-pane fade" role="tabpanel" aria-labelledby="SweetTime">
+      <p>...</p>
       </div>
     </div>
   </div>
