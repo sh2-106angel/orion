@@ -56,14 +56,17 @@ a:visited {
     <li role="tab" aria-selected="false" aria-controls="panel-2" tabindex="-1" id="tab-2"><button class="tabs" data-bs-toggle="tab"><a href="#SweetTime">Sweet Time</a></li>
 
   </menu>
-  <div class="window" role="tabpanel" id="panel-2"  tabindex="0" aria-labelledby="tab-1">
+  <div class="window" role="tabpanel" id="panel-1"  tabindex="0" aria-labelledby="tab-1">
     <div class="window-body">
-      <p>content</p>
+      <div class="tab-pane fade show active" id="panel-1" role="tabpanel" aria-labelledby="tab-1">
+      <p>content</p></div>
     </div>
   </div>
   <div class="window" role="tabpanel" id="panel-2" tabindex="0" aria-labelledby="tab-2" hidden>
     <div class="window-body">
+      <div class="tab-pane fade" id="panel-2" role="tabpanel" aria-labelledby="tab-2">
       <p>content2</p>
+      </div>
     </div>
   </div>
 </div>
