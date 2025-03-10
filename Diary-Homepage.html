@@ -56,6 +56,14 @@ a:visited {
   tabButtons.forEach(button => button.addEventListener('click', handleTabClick));
   function handleTabClick(event) {
   event.currentTarget.setAttribute('aria-selected', true);
+  tabPanels.forEach(panel => {
+    panel.hidden = true;
+  });
+  tabButtons.forEach(tab => {
+    // tab.ariaSelected = false;
+    tab.setAttribute('aria-selected', false);
+  });
+  event.currentTarget.setAttribute('aria-selected', true);
   //finding associate tab panel
   const { id } = event.currentTarget;
   const tabPanel = window.querySelector(`[aria-labelledby="${id}"]`);
