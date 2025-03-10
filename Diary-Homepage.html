@@ -51,7 +51,7 @@ a:visited {
 <center><a href="Pointless-Endeavours.html">Pointless Endeavours</a></center>
 <script>
   const tabButtons = tabs.querySelectorAll('[role="tabs"]');
-  const tabPanels = window.querySelectorAll('[role="tabpanel"]');
+  const tabPanels = window-body.querySelectorAll('[role="tabpanel"]');
   
   tabButtons.forEach(button => button.addEventListener('click', handleTabClick));
   function handleTabClick(event) {
@@ -66,13 +66,11 @@ a:visited {
   event.currentTarget.setAttribute('aria-selected', true);
   //finding associate tab panel
   const { id } = event.currentTarget;
-  const tabPanel = window.querySelector(`[aria-labelledby="${id}"]`);
+  const tabPanel = window-body.querySelector(`[aria-labelledby="${id}"]`);
   console.log(tabPanel);
   tabPanel.hidden = false;
 
 </script>
-<div class="window-body" >
-
   <menu role="tablist">
     <li role="tab" aria-selected="true"><div class="tabs"><button role="tab" id="Angel" aria-selected="true" >Angel</div></button></li>
     <li role="tab" aria-selected="false"><div class="tabs"><button role="tab" id="SweetTime" aria-selected="false">Sweet Time</div></button></li>
