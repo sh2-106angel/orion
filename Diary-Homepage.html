@@ -51,16 +51,16 @@ a:visited {
 <div class="window-body" >
 
   <menu role="tablist">
-    <li role="tab" aria-selected="true" id="tab-1"><a href="#tabs">Angel</a></li>
-    <li role="tab" aria-selected="false" id="tab-2"><a href="#tabs">Sweet Time</a></li>
+    <li role="tab" aria-selected="true" aria-controls="panel-1" tabindex="-1"id="tab-1"><a href="#tabs">Angel</a></li>
+    <li role="tab" aria-selected="false" aria-controls="panel-2" tabindex="-1" id="tab-2"><a href="#tabs">Sweet Time</a></li>
 
   </menu>
-  <div class="window" role="tabpanel" id="tab-1">
+  <div class="window" role="tabpanel" id="panel-2"  tabindex="0" aria-labelledby="tab-1">
     <div class="window-body">
       <p>content</p>
     </div>
   </div>
-  <div class="window" role="tabpanel" id="tab-2">
+  <div class="window" role="tabpanel" id="panel-2" tabindex="0" aria-labelledby="tab-2" hidden>
     <div class="window-body">
       <p>content2</p>
     </div>
