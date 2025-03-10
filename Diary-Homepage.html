@@ -52,17 +52,31 @@ a:visited {
 <script>
   const tabButtons = tabs.querySelectorAll('[role="tab"]');
   const tabPanels = tabs.querySelectorAll('[role="tabpanel"]');
-  function handleTabClick(event) {
-  console.log(event);
-  }
+  
   tabButtons.forEach(button => button.addEventListener('click', handleTabClick));
+  function handleTabClick(event) {
+  // hide all tab panels
+  tabPanels.forEach(panel => {
+    panel.hidden = true;
+  });
+  // mark all tabs as unselected
+  tabButtons.forEach(tab => {
+    // tab.ariaSelected = false;
+    tab.setAttribute('aria-selected', false);
+  });
+  event.currentTarget.setAttribute('aria-selected', true);
+  //finding associate tab panel
+  const { id } = event.currentTarget;
+  const tabPanel = tabs.querySelector(`[aria-labelledby="${id}"]`);
+  console.log(tabPanel);
+  tabPanel.hidden = false;
 
 </script>
 <div class="window-body" >
 
   <menu role="tablist">
-    <li role="tab" aria-selected="true" aria-controls="panel-1" tabindex="-1"id="tab-1"><button class="tabs" data-bs-toggle="tab"><a href="#Angel">Angel</a></li>
-    <li role="tab" aria-selected="false" aria-controls="panel-2" tabindex="-1" id="tab-2"><button class="tabs" data-bs-toggle="tab"><a href="#SweetTime">Sweet Time</a></li>
+    <li role="tab" aria-selected="true" aria-controls="panel-1" tabindex="-1"id="Angel"><button class="tabs" id="Angel" aria-selected="true" ><a href="#Angel">Angel</a></li>
+    <li role="tab" aria-selected="false" aria-controls="panel-2" tabindex="-1" id="SweetTime"><button class="tabs" id="Angel" aria-selected="false"><a href="#SweetTime">Sweet Time</a></li>
 
   </menu>
   <div class="window" role="tabpanel" id="panel-1"  tabindex="0" aria-labelledby="tab-1">
