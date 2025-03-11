@@ -3,13 +3,13 @@
   const tabButtons = tabs.querySelectorAll('[role="tabs"]');
   const tabPanels = tabs.querySelectorAll('[role="tabpanel"]');
   
-  tabButtons.forEach(button => {
-    button.addEventListener('click', handleTabClick);
-  });
+
   function handleTabClick(event) {
   console.log(event);
  }
-  function handleTabClick(event) {
+  tabButtons.forEach(button => {
+    button.addEventListener('click', handleTabClick);
+  });
   event.currentTarget.setAttribute('aria-selected', true);
   tabButtons.forEach(tab => {
     // tab.ariaSelected = false;
