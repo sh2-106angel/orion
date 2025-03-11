@@ -1,4 +1,4 @@
-<script>
+
   const tabs = document.querySelector('.tabs');
   const tabButtons = tabs.querySelectorAll('[role="tabs"]');
   const tabPanels = tabs.querySelectorAll('[role="tabpanel"]');
@@ -20,8 +20,5 @@
   const tabPanel = tabs.querySelector(`[aria-labelledby="${id}"]`);
   console.log(tabPanel);
   tabPanel.hidden = false;
+}
 
-  }
- 
- 
-</script>
