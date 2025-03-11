@@ -4,7 +4,7 @@
   const tabPanels = tabs.querySelectorAll('[role="tabpanel"]');
   
   tabButtons.forEach(button => {
-    button.addEventListener('click', handleTabClick)
+    button.addEventListener('click', handleTabClick);
   });
   function handleTabClick(event) {
   console.log(event);
