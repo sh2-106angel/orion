@@ -6,7 +6,7 @@
 
   function handleTabClick(event) {
   console.log(event);
- }
+  }
   tabButtons.forEach(button => {
     button.addEventListener('click', handleTabClick);
   });
