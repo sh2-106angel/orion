@@ -2,10 +2,11 @@
   const tabs = document.querySelector('.tabs');
   const tabButtons = tabs.querySelectorAll('[role="tabs"]');
   const tabPanels = tabs.querySelectorAll('[role="tabpanel"]');
+  
+  tabButtons.forEach(button => button.addEventListener('click', handleTabClick));
   function handleTabClick(event) {
   console.log(event);
-}
-  tabButtons.forEach(button => button.addEventListener('click', handleTabClick));
+ }
   function handleTabClick(event) {
   event.currentTarget.setAttribute('aria-selected', true);
   tabButtons.forEach(tab => {
