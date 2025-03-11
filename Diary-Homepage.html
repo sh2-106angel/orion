@@ -72,14 +72,15 @@ a:visited {
   tabPanel.hidden = false;
 
 </script>
-  <menu role="tablist">
+  <div class="wrapper">
+    <div class="tabs">
+      <menu role="tablist">
+        <li role="tabs" aria-selected="true"><button role="tab" id="Angel" aria-selected="true" >Angel</button></li>
     
-    <li role="tabs" aria-selected="true"><div class="tabs"><button role="tab" id="Angel" aria-selected="true" >Angel</button></div></li>
-    <li role="tabs" aria-selected="false"><div class="tabs"><button role="tab" id="SweetTime" aria-selected="false">Sweet Time</button></div></li>
-  
-  </menu>
+        <li role="tabs" aria-selected="false"><button role="tab" id="SweetTime" aria-selected="false">Sweet Time</button></li>
+      </menu>
   <script src="./tabs.js"></script>
-  <div class="tabs">
+      
   <div class="window" role="tabpanel" aria-labelledby="Angel">
     <div class="window-body" role="tabpanel" aria-labelledby="Angel">
       <p>Hello! This is a work in progress...</p></div>
