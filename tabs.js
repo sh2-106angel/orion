@@ -2,9 +2,7 @@
   const tabButtons = document.querySelectorAll('button[role="tab"]');
   const tabPanels = document.querySelectorAll('.window');
   console.log()
-  tabPanels.forEach(function(panel) {
-  panel.hidden = true;
-})
+
   function handleTabClick(event) {
   console.log(event);
   tabPanels.forEach(panel => {
