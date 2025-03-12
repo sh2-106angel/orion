@@ -1,8 +1,6 @@
 
-  const tabs = document.querySelector('.tab');
-  const tabButtons = tabs.querySelectorAll('[button role="tab"]');
-  const window = document.querySelector('.window');
-  const tabPanels = window.querySelectorAll('[div role="tabpanel"]');
+  const tabButtons = document.querySelectorAll('[button role="tab"]');
+  const tabPanels = document.querySelectorAll('[div role="tabpanel"]');
 
   function handleTabClick(event) {
   console.log(event);
