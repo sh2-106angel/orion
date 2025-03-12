@@ -29,7 +29,6 @@ console.log()
    //finding associate tab panel
 
 console.log()
-debugger;
      //    <menu role="tablist">
      //      <button role="tab" id="Angel" aria-selected="true">Angel</button>
      //      <button role="tab" id="SweetTime" aria-selected="false">Sweet Time</button>
