@@ -7,17 +7,18 @@ console.log()
   console.log(event);
    //mark clicked tab as selected
   event.currentTarget.setAttribute('aria-selected', true);
+  const { id } = event.currentTarget;
+  const tabPanel = document.querySelector('div.window[aria-labelledby="${id}"]');
+  console.log(tabPanel);
+  tabPanel.hidden = false;
 }
-
+debugger;
    tabButtons.forEach(button => {
     button.addEventListener('click', handleTabClick);
   });
 console.log()
    //finding associate tab panel
-  const { id } = event.currentTarget;
-  const tabPanel = document.querySelector('div.window[aria-labelledby="${id}"]');
-  console.log(tabPanel);
-  tabPanel.hidden = false;
+
 console.log()
 debugger;
      //    <menu role="tablist">
