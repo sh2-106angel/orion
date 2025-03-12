@@ -1,6 +1,6 @@
 
   const tabs = document.querySelector('.tab');
-  const tabButtons = tabs.querySelectorAll('[role="tab"]');
+  const tabButtons = tabs.querySelectorAll('[button role="tab"]');
   const window = document.querySelector('.window');
   const tabPanels = window.querySelectorAll('[role="tabpanel"]');
 
