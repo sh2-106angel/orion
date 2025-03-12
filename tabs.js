@@ -16,7 +16,7 @@
    //mark clicked tab as selected
   event.currentTarget.setAttribute('aria-selected', true);
   const { id } = event.currentTarget;
-  const tabPanel = tabPanels.querySelectorAll('[aria-labelledby="${id}"]');
+  const tabPanel = tabPanels.querySelector('[aria-labelledby="${id}"]');
   console.log(tabPanel);
   tabPanel.hidden = false;
 }
