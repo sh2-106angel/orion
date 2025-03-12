@@ -22,5 +22,4 @@
   const tabPanel = tabs.querySelector(`[aria-labelledby="${id}"]`);
   console.log(tabPanel);
   tabPanel.hidden = false;
-}
 
