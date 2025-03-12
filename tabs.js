@@ -1,14 +1,16 @@
 
   const tabButtons = document.querySelectorAll('[button role="tab"]');
   const tabPanels = document.querySelectorAll('[div role="tabpanel"]');
-
+console.log()
   function handleTabClick(event) {
   console.log(event);
 }
-debugger;
+
    tabButtons.forEach(button => {
     button.addEventListener('click', handleTabClick);
   });
+console.log()
+debugger;
   event.currentTarget.setAttribute('aria-selected', true);
   tabButtons.forEach(tab => {
     // tab.ariaSelected = false;
