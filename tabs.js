@@ -10,7 +10,6 @@ console.log()
     button.addEventListener('click', handleTabClick);
   });
 console.log()
-debugger;
   event.currentTarget.setAttribute('aria-selected', true);
   tabButtons.forEach(tab => {
     // tab.ariaSelected = false;
@@ -22,6 +21,8 @@ debugger;
   const tabPanel = tabs.querySelector(`[aria-labelledby="${id}"]`);
   console.log(tabPanel);
   tabPanel.hidden = false;
+console.log()
+debugger;
      //    <menu role="tablist">
      //      <button role="tab" id="Angel" aria-selected="true">Angel</button>
      //      <button role="tab" id="SweetTime" aria-selected="false">Sweet Time</button>
