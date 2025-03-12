@@ -1,7 +1,8 @@
 
   const tabButtons = document.querySelectorAll('button[role="tab"]');
-  const tabPanels = document.querySelectorAll('div[role="tabpanel"]');
+
 console.log()
+
   function handleTabClick(event) {
   console.log(event);
 }
@@ -10,15 +11,11 @@ console.log()
     button.addEventListener('click', handleTabClick);
   });
 console.log()
-  event.currentTarget.setAttribute('aria-selected', true);
-  tabButtons.forEach(tab => {
-    // tab.ariaSelected = false;
-    tab.setAttribute('aria-selected', false);
-  });
+ //mark clicked tab as selected
   event.currentTarget.setAttribute('aria-selected', true);
    //finding associate tab panel
   const { id } = event.currentTarget;
-  const tabPanel = tabs.querySelector(`[aria-labelledby="${id}"]`);
+  const tabPanel = document.querySelector('div.window[aria-labelledby="${id}"]');
   console.log(tabPanel);
   tabPanel.hidden = false;
 console.log()
