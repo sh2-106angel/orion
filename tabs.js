@@ -1,14 +1,22 @@
 
   const tabButtons = document.querySelectorAll('button[role="tab"]');
-
+  const tabPanels = document.querySelectorAll('.window');
   console.log()
 
   function handleTabClick(event) {
   console.log(event);
+  tabPanels.forEach(panel => {
+    panel.hidden = true;
+  });
+  // mark all tabs as unselected
+  tabButtons.forEach(tab => {
+    // tab.ariaSelected = false;
+    tab.setAttribute('aria-selected', false);
+  });
    //mark clicked tab as selected
   event.currentTarget.setAttribute('aria-selected', true);
   const { id } = event.currentTarget;
-  const tabPanel = document.querySelectorAll('div.window[aria-labelledby="${id}"]');
+  const tabPanel = tabPanels.querySelectorAll('[aria-labelledby="${id}"]');
   console.log(tabPanel);
   tabPanel.hidden = false;
 }
