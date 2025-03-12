@@ -5,14 +5,14 @@ console.log()
 
   function handleTabClick(event) {
   console.log(event);
+   //mark clicked tab as selected
+  event.currentTarget.setAttribute('aria-selected', true);
 }
 
    tabButtons.forEach(button => {
     button.addEventListener('click', handleTabClick);
   });
 console.log()
- //mark clicked tab as selected
-  event.currentTarget.setAttribute('aria-selected', true);
    //finding associate tab panel
   const { id } = event.currentTarget;
   const tabPanel = document.querySelector('div.window[aria-labelledby="${id}"]');
