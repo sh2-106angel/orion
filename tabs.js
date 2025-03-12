@@ -5,7 +5,7 @@
   function handleTabClick(event) {
   console.log(event);
 }
-
+debugger;
    tabButtons.forEach(button => {
     button.addEventListener('click', handleTabClick);
   });
