@@ -8,7 +8,7 @@
   console.log(event);
 }
 
-   tabButtons.forEach(tabButtons => {
+   tabButtons.forEach(button => {
     button.addEventListener('click', handleTabClick);
   });
   event.currentTarget.setAttribute('aria-selected', true);
