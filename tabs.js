@@ -8,9 +8,9 @@
   console.log(event);
 }
 
-//    tabButtons.forEach(button => {
-//     button.addEventListener('click', handleTabClick);
-//   });
+   tabButtons.forEach(button => {
+    button.addEventListener('click', handleTabClick);
+  });
 //   event.currentTarget.setAttribute('aria-selected', true);
 //   tabButtons.forEach(tab => {
 //     // tab.ariaSelected = false;
