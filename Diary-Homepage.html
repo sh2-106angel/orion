@@ -38,7 +38,7 @@ a:visited {
   margin: auto;
   width: 60%;
 </style>
-
+<body>
 <br>
 <br>
 <br>
@@ -51,27 +51,26 @@ a:visited {
 <br>
 <center><a href="Pointless-Endeavours.html">Pointless Endeavours</a></center>
 
-  <div class="wrapper">
-    <div class="tabs">
-      <menu role="tablist">
-        <li role="tabs" ><button role="tab" id="Angel" aria-selected="true" >Angel</button></li>
+<div class="wrapper">
+  <div class="tabs">
+        <menu role="tablist">
+          <li role="tabs" ><button role="tab" id="Angel" aria-selected="true" >Angel</button></li>
     
-        <li role="tabs" ><button role="tab" id="SweetTime" aria-selected="false">Sweet Time</button></li>
-      </menu>
+          <li role="tabs" ><button role="tab" id="SweetTime" aria-selected="false">Sweet Time</button></li>
+        </menu>
  
       
-    <div class="window" role="tabpanel" aria-labelledby="Angel">
-      <div class="window-body" role="tabpanel" aria-labelledby="Angel">
-        <p>Hello! This is a work in progress...</p></div>
+      <div class="window" role="tabpanel" aria-labelledby="Angel">
+        <div class="window-body" role="tabpanel" aria-labelledby="Angel">
+           <p>Hello! This is a work in progress...</p>
       </div>
+     <div class="window" role="tabpanel" aria-labelledby="SweetTime" hidden>
+       <div class="window-body" role="tabpanel" aria-labelledby="SweetTime" hidden>
+         <p>Hello again!</p>
      </div>
-  <div class="window" role="tabpanel" aria-labelledby="SweetTime" hidden>
-    <div class="window-body" role="tabpanel" aria-labelledby="SweetTime" hidden>
-      <p>Hello again!</p>
-      </div>
-    </div>
   </div> 
 </div>
+<script src="tabs.js"></script>
 
 <br>
 <br>
@@ -79,6 +78,5 @@ a:visited {
 
 <center><a href="index.html">back</a></center>
 
- <script src="tabs.js"></script>
 </body>
 </html>
