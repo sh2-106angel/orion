@@ -9,24 +9,17 @@ body {
   background-attachment: fixed;  
   background-size: 100% 100%;
 }
-.center {
+.container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
+  justify-content: center; /* center horizontally */
+  align-items: center; /* center vertically */
 }
 </style>
 </head>
 <body>
-<p>
-<br>
-<br>
-<br>
-<br>
-<br>
-</p>
+<div class = "container">
 <div id="winamp-container"></div>
-
+</div>
 <script>const Winamp = window.Webamp;
 
 // Check if Winamp is supported in this browser
