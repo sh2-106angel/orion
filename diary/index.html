@@ -43,12 +43,20 @@ a:visited {
 .center {
   margin: auto;
   width: 60%;
-
+.container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100%;
+}
+ body, html {
+  height: 100%;
+}
 </style>
 <body>
 <br>
 <br>
-
+<div class="container">
         <menu role="tablist">
           <button role="tab" id="Angel" aria-selected="true">Angel</button>
           <button role="tab" id="SweetTime" aria-selected="false">Sweet Time</button>
@@ -310,7 +318,7 @@ img {
 </center>
 </div>
 <script src="tabs.js"></script>
-
+</div>
 <br>
 <br>
 <br>
@@ -323,6 +331,7 @@ img {
 <br>
 <br>
 <br>
+      
 <div class="footer"><a href="/orion/">home</a></div>
 
 </body>
