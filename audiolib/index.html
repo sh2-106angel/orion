@@ -54,8 +54,11 @@ const webamp = new Webamp({
     metaData: {
       artist: "Loathe",
       title: "Is It Really You?",
+      artist: "Jejune",
+      title: "That's Why She Hates Me",
     },
-    url: "Loathe - Is It Really You.mp3"
+    url: "Loathe - Is It Really You.mp3",
+    url: "That's Why She Hates Me - Jejune.mp3",
   }],
  
   initialSkin: {
@@ -67,24 +70,7 @@ const webamp = new Webamp({
   },
 
 });
-const track = {
-    // Either `url` or `blob` must be specified
-    // Note: This URL must be served the with correct CORs headers.
-    url: "That's Why She Hates Me - Jejune.mp3",
-    blob: dataBlob,
 
-    // Optional. Name to be used until ID3 tags can be resolved.
-    // If the track has a `url`, and this property is not given,
-    // the filename will be used instead.
-    defaultName: "That's Why She Hates Me",
-
-    metaData: {
-        artist: 'Jejune',
-        title: "That's Why She Hates Me",
-    },
-
-    duration: 292
-};
 // Render after the skin has loaded.
 webamp.renderWhenReady(document.getElementById('winamp-container'));
 </script>
