@@ -57,11 +57,7 @@ const webamp = new Webamp({
     },
     url: "Loathe - Is It Really You.mp3",
   }],
-  track: {
-   artist: "Jejune",
-   title: "That's Why She Hates Me",
-   url: "That's Why She Hates Me - Jejune.mp3",
-  }
+
   initialSkin: {
     // NOTE: Your skin file must be served from the same domain as your HTML
     // file, or served with permissive CORS HTTP headers:
@@ -71,7 +67,9 @@ const webamp = new Webamp({
   },
 
 });
-
+webamp.appendTracks([
+    {url: "That's Why She Hates Me - Jejune.mp3"}
+ ]}
 // Render after the skin has loaded.
 webamp.renderWhenReady(document.getElementById('winamp-container'));
 </script>
