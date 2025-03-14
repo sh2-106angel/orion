@@ -65,7 +65,26 @@ const webamp = new Webamp({
     // Can be downloaded from https://github.com/captbaritone/webamp/raw/master/skins/TopazAmp1-2.wsz
     url: "Winamp_X2.wsz"
   },
+
 });
+const track = {
+    // Either `url` or `blob` must be specified
+    // Note: This URL must be served the with correct CORs headers.
+    url: "That's Why She Hates Me - Jejune.mp3",
+    blob: dataBlob,
+
+    // Optional. Name to be used until ID3 tags can be resolved.
+    // If the track has a `url`, and this property is not given,
+    // the filename will be used instead.
+    defaultName: "That's Why She Hates Me",
+
+    metaData: {
+        artist: 'Jejune',
+        title: "That's Why She Hates Me",
+    },
+
+    duration: 292
+};
 // Render after the skin has loaded.
 webamp.renderWhenReady(document.getElementById('winamp-container'));
 </script>
