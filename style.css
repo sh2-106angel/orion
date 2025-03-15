@@ -57,12 +57,22 @@ p {
     right: 10px;
 }
 
+.sparkle-container {
+    position: absolute;
+    top: 368px;
+    right: 99px;
+}
+
 .star-icon {
     width: 8%;
 }
 
 .moon-icon {
     width: 25%;
+}
+
+.sparkle-icon {
+    width: 50%;
 }
 
 /* Image Styles */
