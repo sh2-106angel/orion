@@ -48,7 +48,7 @@ p {
 /* Home Page Elements */
 .meteor-container {
     position: absolute;
-    top: 90px;
+    top: 4px;
     right: 90px;
 }
 
@@ -65,7 +65,7 @@ p {
 }
 
 .meteor-icon {
-    width: 20%;
+    max-width: 90%;
 }
 
 .moon-icon {
