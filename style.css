@@ -102,6 +102,7 @@ button.diary-tab {
     background: #dfdfdf !important;
     color: #0b101f;
     font-family: 'Delicatus';
+    font-size: 15px;
 }
 
 /* Audio Library-specific styles */
