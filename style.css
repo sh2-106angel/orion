@@ -48,7 +48,7 @@ p {
 /* Home Page Elements */
 .meteor-container {
     position: absolute;
-    bottom: 90px;
+    top: 90px;
     right: 90px;
 }
 
