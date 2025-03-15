@@ -9,8 +9,6 @@ const tabPanels = document.querySelectorAll('.window');
 tabPanels.forEach(function(panel) {
   panel.hidden = true;
 });
-debugger;
-console.log()
 function handleTabClick(event) {
   // Step 1: Hide all tab panels
   tabPanels.forEach(panel => {
