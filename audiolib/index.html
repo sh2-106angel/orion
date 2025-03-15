@@ -1,82 +1,46 @@
-<script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script>
-<html>
+<!DOCTYPE html>
+<html lang="en" class="full-height">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <style>
-@font-face {
-font-family: 'Delicatus';
-src: url('/orion/Delicatus.ttf');
-}
-
-a:link {
-color: white;
-background-color: transparent;
-text-decoration: none;
-}
-a:visited {
-color: white;
-background-color: transparent;
-text-decoration: none;
-}
-body {
-  background-image: url('Orion.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: 100% 100%;
-}
-.container {
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-  height: 100%;
-}
- body, html {
-  height: 100%;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Library</title>
+    
+    <link rel="stylesheet" href="/style.css">
+    
+    <script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script>
 </head>
-<body>
-<div class = "container">
-<div id="winamp-container"></div>
-</div>
-<script>const Winamp = window.Webamp;
-
-// Check if Winamp is supported in this browser
-if(!Webamp.browserIsSupported()) {
-    alert("Oh no! Webamp does not work!")
-    throw new Error("What's the point of anything?")
-}
-
-// All configuration options are optional.
-const webamp = new Webamp({
-  initialTracks: [{
-    metaData: {
-      artist: "Loathe",
-      title: "Is It Really You?",
-    },
-    url: "Loathe - Is It Really You.mp3",
-  }],
-
-  initialSkin: {
-    url: "Winamp_X2.wsz"
-  },
-
-});
-
-// Render after the skin has loaded.
-webamp.renderWhenReady(document.getElementById('winamp-container'));
-</script>
-<style>
-   .footer{ 
-       position: fixed;     
-       text-align: center;    
-       bottom: 20px; 
-       width: 100%;
-       
-   }  
- div {
-  font-family: 'Delicatus';
- }
-</style>
-<div class="footer"><center><a href="/orion/">home</center></div>
+<body class="full-height">
+    <div class="container">
+        <div id="winamp-container"></div>
+    </div>
+    
+    <div class="footer">
+        <a href="/">home</a>
+    </div>
+    
+    <script>
+        const Winamp = window.Webamp;
+        
+        if(!Webamp.browserIsSupported()) {
+            alert("Oh no! Webamp does not work in this browser!");
+            throw new Error("Webamp is not supported in this browser");
+        }
+        
+        const webamp = new Winamp({
+            initialTracks: [{
+                metaData: {
+                    artist: "Loathe",
+                    title: "Is It Really You?",
+                },
+                url: "Loathe - Is It Really You.mp3",
+            }],
+            
+            initialSkin: {
+                url: "Winamp_X2.wsz"
+            }
+        });
+        
+        webamp.renderWhenReady(document.getElementById('winamp-container'));
+    </script>
 </body>
+</html>
