@@ -5,18 +5,19 @@
 }
 
 body {
-    background-image: url('Orion.jpg');
+    /* Previous file was too big! Use https://squoosh.app/ to compress it */
+    background-image: url('Orion.avif');
     background-repeat: no-repeat;
     background-attachment: fixed;  
     background-size: cover;
     margin-top: 40px;
     font-family: 'Delicatus', Arial, sans-serif;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
 }
 
 /* Specific background style for the diary page */
 body.diary-bg {
-    background-size: 100% 100%;
+    background-size: cover;
 }
 
 /* Common Link Styles */
@@ -76,12 +77,6 @@ img {
     margin-right: auto;
 }
 
-.diary-image {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 /* Diary-specific styles */
 div.diary-content {
     font-family: 'Delicatus';
@@ -94,6 +89,12 @@ div.diary-content {
 
 .diary-date {
     font-weight: bold;
+}
+
+.diary-image {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button.diary-tab {
