@@ -50,6 +50,8 @@ p {
     position: absolute;
     top: 4px;
     right: 90px;
+    /* Background cosmetic elements should have a z-index of -1 (just anything lower than other elements) so that they dont block clicks */
+    z-index: -1;
 }
 
 .moon-container {
