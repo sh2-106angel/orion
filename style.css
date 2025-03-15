@@ -46,9 +46,10 @@ p {
 }
 
 /* Home Page Elements */
-.star-container {
-    position: relative;
-    margin-bottom: 20px;
+.meteor-container {
+    position: absolute;
+    bottom: 90px;
+    right: 90px;
 }
 
 .moon-container {
@@ -63,8 +64,8 @@ p {
     right: 161px;
 }
 
-.star-icon {
-    width: 8%;
+.meteor-icon {
+    width: 20%;
 }
 
 .moon-icon {
