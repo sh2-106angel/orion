@@ -66,6 +66,16 @@ p {
     right: 171px;
 }
 
+.saturn-container {
+    position: absolute;
+    top: 585px;
+    right: 158px;
+}
+
+.saturn-icon {
+    width:29%
+}
+
 .meteor-icon {
     max-width: 90%;
 }
