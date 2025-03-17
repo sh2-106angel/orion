@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../98.css">
+</head>
+<body>
+<div class="container">
+    <div class="footer">
+        <a href="../">home</a>
+    </div>
+    <div class="window" style="width: 300px">
+        <div class="title-bar">
+          <div class="title-bar-text">Picture Viewer - Select File to See or Hear - Beautiful-CLouds.JPG - (640 x 480)</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+            <p><u>F</u>ile &nbsp <u>E</u>dit &nbsp<u>H</u>elp
+            <br>
+            Picture Text:
+               <select id="dropdown">
+                <option value="My-Memories\Beautiful-Clouds.JPG" selected>My-Memories\Beautiful-Clouds.JPG</option>
+                <option value = "My-Memories\Aquarium.mp4">My-Memories\Aquarium.mp4</option>
+                <option>My-Memories\</option>
+                <option>My-Memories\</option>
+                <option>My-Memories\</option>
+              </select>
+              <br>
+              <br>
+              <div class="media-container">
+              <img id = "image" src="My-Memories\Beautiful-Clouds.JPG" alt="A pretty picture of clouds!">
+              <video id="video" controls style="display:none;">
+              <source id="video-source" src="My-Memories\Aquarium.mp4" type="video/mp4">
+              </video>
+              </div>
+            </p>
+            
+            </div>
+    </div>
+</div>
+<script src="pictureviewer.js"></script>   
+</body>
+</html>
