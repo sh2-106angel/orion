@@ -153,3 +153,36 @@ body.full-height, html.full-height {
     text-align: center;
     z-index: 100;
 }
+
+/* Gallery-specific styles */
+.media-container {
+    margin-top: 20px;
+}
+
+img {
+    max-width: 250px;
+    max-height: 400px;
+    margin-left: 15px;
+    border: 2px solid #ccc;
+}
+
+video {
+    max-width: 250px;
+    max-height: 400px;
+    margin-left: 15px;
+    border: 2px solid #ccc;
+}
+.title-bar {
+  font-family:'Delicatus' !important;
+  font-size: 12px !important;
+}
+.window-body {
+    font-family:'Delicatus' !important;
+    font-size: 13px;
+    margin-top: -12px !important;
+    margin-left: 4px !important;
+}
+select {
+    margin-left: 0px !important;
+    font-family:'Delicatus' !important;
+}
