@@ -37,12 +37,16 @@ p {
     width: 60%;
 }
 
-.footer { 
-    position: fixed;     
-    text-align: center;    
-    bottom: 20px; 
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    font-size: 20px;
+    background-color: inherit;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 100;
+    font-family: 'Delicatus';
 }
 
 /* Home Page Elements */
