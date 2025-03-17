@@ -37,8 +37,11 @@
               <div class="media-container">
               <img id = "image" src="My-Memories\Beautiful-Clouds.JPG" alt="A pretty picture of clouds!">
               <video id="video" controls style="display:none;">
+              <!-- for chrome, firefox android - H264 -->
               <source id="video-source" src="My-Memories\Aquarium.MP4" type="video/mp4">
-              </video>
+              <!-- for safari, ios -->
+              <source id="video-source" src="My-Memories\Aquarium.m4v" type="video/x-m4v">
+            </video>
               </div>
             </p>
             
