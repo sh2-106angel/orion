@@ -1,4 +1,8 @@
-    const firebaseConfig = {
+// Import Firestore functions from Firebase SDK v9+
+import { getFirestore, collection, addDoc, query, orderBy, onSnapshot, serverTimestamp } from "firebase/firestore";
+
+
+const firebaseConfig = {
 
         apiKey: "AIzaSyDuKsQqfEYk4V6aH5YovYxzTjrx1Obl8Wk",
       
@@ -19,8 +23,6 @@
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
-// Import Firestore functions from Firebase SDK v9+
-import { getFirestore, collection, addDoc, query, orderBy, onSnapshot, serverTimestamp } from "firebase/firestore";
 
 // Initialize Firestore
 const db = getFirestore(app);
