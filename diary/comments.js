@@ -19,10 +19,14 @@
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
+// Import Firestore functions from Firebase SDK v9+
+import { getFirestore, collection, addDoc, query, orderBy, onSnapshot, serverTimestamp } from "firebase/firestore";
 
+// Initialize Firestore
+const db = getFirestore(app);
 
-// Function to load and display comments from Firestore
-document.getElementById("postComment").addEventListener("click", function () {
+// Function to post a comment
+document.getElementById("postComment").addEventListener("click", async function () {
     let name = document.getElementById("name").value.trim();
     let comment = document.getElementById("comment").value.trim();
 
@@ -31,23 +35,25 @@ document.getElementById("postComment").addEventListener("click", function () {
         return;
     }
 
-    // Save comment to Firestore
-    db.collection("comments").add({
-        name: name,
-        comment: comment,
-        timestamp: firebase.firestore.FieldValue.serverTimestamp()
-    }).then(() => {
+    try {
+        // Save comment to Firestore
+        await addDoc(collection(db, "comments"), {
+            name: name,
+            comment: comment,
+            timestamp: serverTimestamp()
+        });
+
         document.getElementById("name").value = "";
         document.getElementById("comment").value = "";
-    }).catch(error => {
+    } catch (error) {
         console.error("Error adding comment: ", error);
-    });
+    }
 });
 
-
-// Function to add a comment to the page
+// Function to load comments
 function loadComments() {
-    db.collection("comments").orderBy("timestamp", "desc").onSnapshot(snapshot => {
+    const q = query(collection(db, "comments"), orderBy("timestamp", "desc"));
+    onSnapshot(q, (snapshot) => {
         let commentsSection = document.getElementById("commentsSection");
         commentsSection.innerHTML = "<p style='text-align:center'>messages</p>";
 
@@ -72,4 +78,5 @@ function loadComments() {
 
 // Load comments when the page loads
 window.onload = loadComments;
+
 
