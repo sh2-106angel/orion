@@ -5,14 +5,24 @@
 }
 
 body {
-    /* Previous file was too big! Use https://squoosh.app/ to compress it */
     background-image: url('Orion.avif');
     background-repeat: no-repeat;
-    background-attachment: fixed;  
     background-size: cover;
-    margin-top: 40px;
-    font-family: 'Delicatus';
-    /* margin-bottom: 40px; */
+    background-position: center;
+    background-attachment: scroll; /* Change from fixed to scroll */
+}
+
+@media (max-width: 768px) { 
+    body::before {
+        content: "";
+        position: fixed; 
+        top: 0; 
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: url('Orion.avif') no-repeat center center / cover;
+        z-index: -1;
+    }
 }
 
 /* Specific background style for the diary page */
@@ -106,7 +116,7 @@ div.diary-content {
 
 .window.diary-content {
     position: relative !important; /* Ensure .field-row-stacked is positioned inside .window */
-    padding-bottom: 300px !important; 
+    padding-bottom: 100px !important; 
 }
 
 .diary-text {
@@ -132,67 +142,6 @@ button.diary-tab {
     font-size: 15px;
 }
 
-/* diary comments  */
-.field-row-stacked {
-    position: absolute;
-    bottom: 10px; 
-    left: 50%;
-    transform: translateX(-50%); /* Centers the entire div */
-    width: 55%; /* Adjust as needed */
-    padding: 15px;
-    text-align: center;
-    z-index: 100;
-    font-family: 'Delicatus';
-    color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers children horizontally */
-    gap: 10px; /* Adds spacing between elements */
-   
-}
-
-.field-row-stacked label {
-    text-align: center; 
-    font-size:16px;
-}
-
-.field-row-stacked input,
-.field-row-stacked textarea {
-    width: 80%; /* Adjust width */
-    max-width: 400px; /* Prevents it from getting too wide */
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid white;
-    background-color: transparent;
-    color: black;
-    text-align: center; /* Centers text inside */
-    outline: none;
-}
-
-.field-row-stacked button {
-    width: 50%;
-    max-width: 200px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid white;
-    background-color: transparent;
-    color: black;
-    cursor: pointer;
-}
-
-.comment-box {
-    background-color:transparent;
-    padding: 10px;
-    margin-top: 10px;
-    
-}
-.comment-box strong {
-    display: block;
-    color: #001c83;
-}
-.comment-box p {
-    margin: 5px 0 0;
-}
 
 
 /* Audio Library-specific styles */
