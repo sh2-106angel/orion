@@ -109,6 +109,13 @@ img {
 }
 
 /* Diary-specific styles */
+
+ul.tree-view {
+    font-family: 'Delicatus' !important;
+    font-size: 15px;
+}
+
+
 div.diary-content {
     font-family: 'Delicatus';
     font-size: 25px;
@@ -134,13 +141,6 @@ div.diary-content {
     margin-right: auto;
 }
 
-button.diary-tab {
-    background: #dfdfdf !important;
-    padding:2px;
-    color: #0b101f;
-    font-family: 'Delicatus';
-    font-size: 15px;
-}
 
 
 
