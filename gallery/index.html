@@ -14,7 +14,7 @@
     </div>
     <div class="window" style="width: 300px">
         <div class="title-bar">
-          <div class="title-bar-text">Picture Viewer - Select File to See or Hear - Beautiful-CLouds.JPG - (640 x 480)</div>
+          <div class="title-bar-text">Picture Viewer - Select File to See or Hear - Beautiful-Clouds.JPG</div>
           <div class="title-bar-controls">
             <button aria-label="Minimize"></button>
             <button aria-label="Maximize"></button>
@@ -28,30 +28,39 @@
                <select id="dropdown">
                 <option value="My-Memories\Beautiful-Clouds.JPG" selected>My-Memories\Beautiful-Clouds.JPG</option>
                 <option value = "My-Memories\Aquarium.MP4">My-Memories\Aquarium.MP4</option>
-                <option>My-Memories\</option>
-                <option>My-Memories\</option>
-                <option>My-Memories\</option>
+                <option value="My-Memories\Keychain.JPG">My-Memories\Keychain.JPG</option>
+                <option value="My-Memories\Cape-Leadwort.JPG">My-Memories\Cape-Leadwort.JPG</option>
+                <option value="My-Memories\Feral-Kitty.JPG">My-Memories\Feral-Kitty.JPG</option>
+                <option value="My-Memories\Me-Carrying-Flowers.JPG">My-Memories\Me-Carrying-Flowers.JPG</option>
+                <option value="My-Memories\Lift-Reflection.JPG">My-Memories\Lift-Reflection.JPG</option>
+           
+              
               </select>
               <br>
               <br>
-              <div class="media-container">
+          <div class="media-container">
               <img id = "image" src="My-Memories\Beautiful-Clouds.JPG" alt="A pretty picture of clouds!">
-              <video poster = "My-Memories\aquariumposter.png" id="video" controls style="display:none;" controlsList="nofullscreen" controls webkit-playsinline playsinline>
+               <video poster = "My-Memories\aquariumposter.png" id="video" controls style="display:none;"  controlsList="nofullscreen" muted controls webkit-playsinline playsinline>
               <!-- for chrome, firefox android - H264 -->
               <source id="video-source" src="My-Memories\Aquarium.MP4" type="video/mp4">
               <!-- for safari, ios -->
               <source id="video-source" src="My-Memories\Aquarium.m4v" type="video/x-m4v">
             </video>
-                  <p id="description">
+            <p id="description">
 
             </p>
-              </div>
-            </p>
             
-            </div>
+             
+          </div>
+          </div>
+         
+            </p>
+            <br>
+            <br>
+      </div>
     </div>
 </div>
-    <div class="left"> <a href="../diary"> diary</a></div>
+<div class="left"> <a href="../diary"> diary</a></div>
 <script src="pictureviewer.js"></script>   
 </body>
 </html>
