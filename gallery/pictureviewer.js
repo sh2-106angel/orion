@@ -13,9 +13,8 @@ const fileDescriptions = {
     "Keychain.JPG": "My keychain on my bag that I carry with me everywhere! The bag is super beaten up by now... the keychain is the cat from Kiki's Delivery Service! To be honest, I haven't watched that movie.. I remember starting it a long time ago and I'm not sure why I didn't finish it. Nothing from Studio Ghibli can be bad though. My first Ghibli film (and probably first film ever?) was Spirited Away. I was around toddler age, watching it on the TV screen",
     "Cape-Leadwort.JPG": "The day I discovered my new favourite flower. By the way, my favourite colour has always been blue!",
     "Feral-Kitty.JPG": "I see him getting fed by an elderly woman sometimes. I wonder if he lets her pet him. It's rare to see a feral cat in a neighbourhood",
-    "Me-Carrying-Flowers.JPG": "Right outside the cafe I studied at, there was  a small pop-up stall selling flowers, and I like getting them for my room. I keep the wilted flowers too, in a cup on my bookshelf. I'd feel bad if I threw them away because they were no longer beautiful or smelled nice.",
-    "Lift-Reflection.JPG": "I'm not sure if you've noticed, but I like to dress really casually and simply when I go out. But I decided to take a picture of this shirt because I liked how it was very princess-like. I always wanted to be a princess because then I wouldn't have to do anything, but still be able to do everything. Just a little childish wish that I'll always have in my heart"
-};
+    "Me-Carrying-Flowers.JPG": "Right outside the cafe I always studied at, there is a little flower stand, and I liked to pick out floral arrangements for my room. I keep the wilted flowers too, in a cup on my bookshelf. I'd feel bad if I threw them away because they were no longer beautiful or smelled nice.",
+    };
 
 
 // Function: Changing title bar when different item is selected in dropdown menu
