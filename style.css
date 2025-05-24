@@ -61,7 +61,7 @@ p {
 .meteor-container {
     position: absolute;
     top: 4px;
-    right: 90px;
+    left: 30px;
 }
 
 .moon-container {
