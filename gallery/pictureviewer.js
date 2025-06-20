@@ -9,12 +9,13 @@ const description = document.querySelector('#description');
 
 const fileDescriptions = {
     "Beautiful-Clouds.JPG" : "I had never seen clouds this pretty or defined before in my life. I was crossing the road, making my way to my usual cafe to study and thankfully, I remembered to look at the sky. I look at the sky often now, unlike before",
-    "Aquarium.MP4" : "Please ignore the noise in the background.. This was my second visit to the Science Centre. The first time I visited was with my childhood best friend, and I remember that was really fun. It was pretty disappointing because there wasn't much to see now. Everything changes after all",
-    "Keychain.JPG": "My keychain on my bag that I carry with me everywhere! The bag is super beaten up by now... the keychain is the cat from Kiki's Delivery Service! To be honest, I haven't watched that movie.. I remember starting it a long time ago and I'm not sure why I didn't finish it. Nothing from Studio Ghibli can be bad though. My first Ghibli film (and probably first film ever?) was Spirited Away. I was around toddler age, watching it on the TV screen",
+    "Aquarium.MP4" : "Please ignore the noise in the background.. This was my second visit to the Science Centre after several years. The first time I visited was with someone irreplaceable. There was so much to see back then, but everything was replaced in the end.",
+    "Keychain.JPG": "My keychain on my bag that I carry with me everywhere! The cat from Kiki's Delivery Service! My first Ghibli film - and first film ever - was Spirited Away.",
     "Cape-Leadwort.JPG": "The day I discovered my new favourite flower. By the way, my favourite colour has always been blue!",
-    "Feral-Kitty.JPG": "I see him getting fed by an elderly woman sometimes. I wonder if he lets her pet him. It's rare to see a feral cat in a neighbourhood",
-    "Me-Carrying-Flowers.JPG": "Right outside the cafe I always studied at, there is a little flower stand, and I liked to pick out floral arrangements for my room. I keep the wilted flowers too, in a cup on my bookshelf. I'd feel bad if I threw them away because they were no longer beautiful or smelled nice.",
-    };
+    "Feral-Kitty.JPG": "I see him getting fed by an elderly woman sometimes. I wonder if he lets her pet him. It's rare to see a feral cat in a neighbourhood. One time, I witnessed a cat fight between him and the tabby cat, and I saw his white fur flying in the air in the midst of the brawl. Cats are terrifying sometimes.. ",
+    "Me-Carrying-Flowers.JPG": "Right outside the cafe I studied at, there was a little flower stand, and I liked to handpick floral arrangements for my room. It was really fun putting them together. I still keep the wilted flowers, in a cup on my bookshelf. I think I will throw them now.",
+    "Stamp-Collection.AVIF": "Their temporary new home is an old puzzle box.",
+    "Favourite-Stamp.AVIF": "'Utazás a holdba és a hold körül': Journey to and around the Moon."};
 
 
 // Function: Changing title bar when different item is selected in dropdown menu
@@ -40,7 +41,7 @@ dropdown.addEventListener('change', (event) => {
         const fileExtension = filePath.split('.').pop().toLowerCase();
     
 
-        if (['bmp', 'jpg', 'jpeg', 'png'].includes(fileExtension)) {
+        if (['bmp', 'jpg', 'jpeg', 'png', 'avif'].includes(fileExtension)) {
         // It's an image file
         image.style.display = 'block'; // Show image
         video.style.display = 'none';  // Hide video
