@@ -10,7 +10,7 @@ const description = document.querySelector('#description');
 const fileDescriptions = {
     "CLOUDS.JPG" : "I had never seen clouds this pretty or defined before in my life. I was crossing the road, making my way to my usual cafe to study and thankfully, I remembered to look at the sky. I look at the sky so much more now than before. 11 March 2025",
     "AQUARIUM.MP4" : "This was my second visit to this place after several years. The first time I visited was with someone irreplaceable. There was so much to see back then, but everything was replaced in the end. 8 May 2024",
-    "CAPE-LEADWORT.JPG": "The day I discovered my new favourite flower. By the way, my favourite colour has always been blue!",
+    "CAPE-LEADWORT.JPG": "The day I discovered my new favourite flower. My favourite colour has always been blue.",
     "OLD-STAMPS.AVIF": "Their temporary new home is an old puzzle box.",
     "FAVOURITE-STAMP.AVIF": "Translated from Hungarian: 'Journey to and around the Moon.'",
     "LILYPADS.AVIF": "21 June 2025",
