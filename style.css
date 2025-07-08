@@ -5,11 +5,12 @@
 }
 
 body {
-    background-image: url('Orion.avif');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: scroll; /* Change from fixed to scroll */
+    background-attachment: fixed; /* Change from fixed to scroll */
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 768px) { 
@@ -20,83 +21,183 @@ body {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background: url('Orion.avif') no-repeat center center / cover;
         z-index: -1;
     }
 }
 
-/* Specific background style for the diary page */
+body.enter-bg {
+    background-image: url('fishypixel.jpg');
+    
+}
+
+body.home-bg {
+    background-image: url('./home/welcome.jpg');
+    
+}
+
+body.about-bg {
+    background-image: url('./about/about.jpg');
+    
+}
+
 body.diary-bg {
+    background-image: url('diary/POND.jpg');
     background-size: cover;
+}
+
+@-webkit-keyframes snowflakes-fall {
+    0% {
+        top: -10%
+    }
+    100% {
+        top: 100%
+    }
+}
+
+@-webkit-keyframes snowflakes-shake {
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+    50% {
+        -webkit-transform: translateX(80px);
+        transform: translateX(80px)
+    }
+}
+
+@keyframes snowflakes-fall {
+    0% {
+        top: -10%
+    }
+    100% {
+        top: 100%
+    }
+}
+
+@keyframes snowflakes-shake {
+    0%,
+    100% {
+        transform: translateX(0)
+    }
+    50% {
+        transform: translateX(80px)
+    }
+}
+
+.snowflake {
+    position: fixed;
+    top: -10%;
+    z-index: 9999;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+    -webkit-animation-duration: 10s, 3s;
+    -webkit-animation-timing-function: linear, ease-in-out;
+    -webkit-animation-iteration-count: infinite, infinite;
+    -webkit-animation-play-state: running, running;
+    animation-name: snowflakes-fall, snowflakes-shake;
+    animation-duration: 10s, 3s;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+    animation-play-state: running, running
+}
+
+.snowflake:nth-of-type(0) {
+    left: 1%;
+    -webkit-animation-delay: 0s, 0s;
+    animation-delay: 0s, 0s
+}
+
+.snowflake:nth-of-type(1) {
+    left: 10%;
+    -webkit-animation-delay: 1s, 1s;
+    animation-delay: 1s, 1s
+}
+
+.snowflake:nth-of-type(2) {
+    left: 20%;
+    -webkit-animation-delay: 6s, .5s;
+    animation-delay: 6s, .5s
+}
+
+.snowflake:nth-of-type(3) {
+    left: 30%;
+    -webkit-animation-delay: 4s, 2s;
+    animation-delay: 4s, 2s
+}
+
+.snowflake:nth-of-type(4) {
+    left: 40%;
+    -webkit-animation-delay: 2s, 2s;
+    animation-delay: 2s, 2s
+}
+
+.snowflake:nth-of-type(5) {
+    left: 50%;
+    -webkit-animation-delay: 8s, 3s;
+    animation-delay: 8s, 3s
+}
+
+.snowflake:nth-of-type(6) {
+    left: 60%;
+    -webkit-animation-delay: 6s, 2s;
+    animation-delay: 6s, 2s
+}
+
+.snowflake:nth-of-type(7) {
+    left: 70%;
+    -webkit-animation-delay: 2.5s, 1s;
+    animation-delay: 2.5s, 1s
+}
+
+.snowflake:nth-of-type(8) {
+    left: 80%;
+    -webkit-animation-delay: 1s, 0s;
+    animation-delay: 1s, 0s
+}
+
+.snowflake:nth-of-type(9) {
+    left: 90%;
+    -webkit-animation-delay: 3s, 1.5s;
+    animation-delay: 3s, 1.5s
+}
+
+.snowflake:nth-of-type(10) {
+    left: 25%;
+    -webkit-animation-delay: 2s, 0s;
+    animation-delay: 2s, 0s
+}
+
+.snowflake:nth-of-type(11) {
+    left: 65%;
+    -webkit-animation-delay: 4s, 2.5s;
+    animation-delay: 4s, 2.5s
 }
 
 /* Common Link Styles */
 a:link, a:visited {
-    color: white;
+    color: rgb(255, 255, 255);
     background-color: transparent;
     text-decoration: none;
 }
 
-p {
-    color: #0b101f;
-}
 
 /* Common Layout Elements */
 .center {
-    margin: auto;
-    width: 60%;
-}
-
-.footer { 
-    position: fixed;     
-    text-align: center;    
-    bottom: 20px; 
-    width: 100%;
-    font-size: 20px;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Delicatus';
+    font-size:25px;
+  }
 
 
-
-/* Home Page Elements */
-.meteor-container {
-    position: absolute;
-    top: 4px;
-    left: 30px;
-}
-
-.moon-container {
-    position: absolute;
-    top: 150px;
-    right: 10px;
-}
-
-.sparkle-container {
-    position: absolute;
-    top: 322px;
-    right: 191px;
-}
-
-.saturn-container {
-    position: absolute;
-    top: 570px;
-    right: 158px;
-}
-
-.saturn-icon {
-    width:29%
-}
-
-.meteor-icon {
-    max-width: 90%;
-}
-
-.moon-icon {
-    width: 25%;
-}
-
-.sparkle-icon {
-    width: 50%;
-}
 
 /* Image Styles */
 img {
@@ -112,25 +213,84 @@ img {
 
 /* Diary-specific styles */
 
-ul.tree-view {
-    font-family: 'Delicatus' !important;
-    font-size: 15px;
-}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+  }
 
-
-div.diary-content {
+h1 {
     font-family: 'Delicatus';
-    font-size: 25px;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    
+    animation-name: floating;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+ @keyframes floating {
+    0% {
+      transform: translate(0, 0px);
+    }
+
+    50% {
+      transform: translate(0, 6px);
+    }
+
+    100% {
+      transform: translate(0, -0px);
+    }
+ }
+   
+
+p {
+    font-family: 'Delicatus';
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    text-shadow:
+                0 0 5px rgb(187, 156, 237),
+                0 0 10px rgb(16, 70, 70),
+                0 0 20px rgb(53, 97, 144),
+                0 0 40px rgb(44, 69, 160)
 }
 
-.window.diary-content {
-    position: relative !important; /* Ensure .field-row-stacked is positioned inside .window */
-    padding-bottom: 100px !important; 
+img {
+    box-shadow:  0 0 5px rgb(156, 202, 237),
+                 0 0 10px rgb(12, 87, 57),
+                 0 0 20px rgb(53, 97, 144),
+                 0 0 40px rgb(44, 69, 160);
+} 
+.entry-links {
+    font-family: 'Delicatus';
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
 }
+
+  
+
+[id] {
+	display: none;
+    
+}
+[id]:target {
+  display:block;
+    
+}
+
 
 .diary-text {
     font-size: 20px;
-    color: #0b101f;
+    color: black;
 }
 
 .diary-date {
@@ -146,31 +306,20 @@ div.diary-content {
 
 
 
-/* Audio Library-specific styles */
-.container {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 100%;
-}
-
-/* Ensure full height for audio library */
-body.full-height, html.full-height {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-} 
 
 .footer {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: inherit;
     padding: 10px 0;
     text-align: center;
     z-index: 100;
     font-family: 'Delicatus';
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    color:white;
 
 }
 .right {
@@ -218,27 +367,20 @@ video {
     border: 2px solid #ccc;
     
 }
-.title-bar {
-  font-family:'Delicatus' !important;
-  font-size: 12px !important;
-}
-.window-body {
-    font-family:'Delicatus' !important;
-    font-size: 13px;
-    margin-top: -12px !important;
-    margin-left: 4px !important;
-}
-select {
-    margin-left: 0px !important;
-    font-family:'Delicatus' !important;
 
-}
-.description {
-    margin-top: 10px;
-    color: black;
-    font-family:'Delicatus';
-    font-size: 13px;
-    display: block;
 
-}
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
 
