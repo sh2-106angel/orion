@@ -8,8 +8,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    display: flex;
-    justify-content: center;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     min-height: 100vh;
@@ -19,46 +18,52 @@ body {
     z-index: 0;
 }
 
-@media (min-width: 769px) {
-    body {
-        background-attachment: fixed;
-    }
+body.enter-bg {
+    background-image: url('fishypixel.jpg');
+}
+body.home-bg {
+    background-image: url('./home/welcome.jpg');
+}
+body.about-bg {
+    background-image: url('./about/about.jpg');
+}
+body.diary-bg {
+    background-image: url('diary/POND.jpg');
 }
 
 @media (max-width: 768px) {
+   body {
+        background-image: none;
+        background-attachment: scroll;
+    }
+
     body::before {
         content: "";
-        position: fixed; 
+        position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-image: inherit;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         z-index: -1;
     }
+
+    body.enter-bg::before {
+        background-image: url('fishypixel.jpg');
+    }
+    body.home-bg::before {
+        background-image: url('./home/welcome.jpg');
+    }
+    body.about-bg::before {
+        background-image: url('./about/about.jpg');
+    }
+    body.diary-bg::before {
+        background-image: url('diary/POND.jpg');
+    }
 }
 
-body.enter-bg {
-    background-image: url('fishypixel.jpg');
-    
-}
-
-body.home-bg {
-    background-image: url('./home/welcome.jpg');
-    
-}
-
-body.about-bg {
-    background-image: url('./about/about.jpg');
-    
-}
-
-body.diary-bg {
-    background-image: url('diary/POND.jpg');
-}
 
 @-webkit-keyframes snowflakes-fall {
     0% {
